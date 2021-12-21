@@ -14,11 +14,11 @@ struct CountsByUsage countBatteriesByUsage(const int* cycles, int nBatteries) {
   mediumCount=0;
   for(i in cycles){
     if(i<150)
-      counts=lowCount+1;
+      lowCounts=lowCount+1;
     else if(1>=150 and i<650)
-      counts=mediumCount+1;
+      mediumCounts=mediumCount+1;
     else
-      counts=HighCount+1;
+      highCounts=HighCount+1;
   }
   return counts;
 }
